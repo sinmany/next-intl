@@ -7,6 +7,22 @@ export const routing = defineRouting({
 
   // Used when no locale matches
   defaultLocale: "en",
+  // localeDetection: false,
+
+  domains: [
+    {
+      domain: "us.example.com",
+      defaultLocale: "en",
+      // Optionally restrict the locales available on this domain
+      locales: ["en"],
+    },
+    {
+      domain: "ca.example.com",
+      defaultLocale: "en",
+      // If there are no `locales` specified on a domain,
+      // all available locales will be supported here
+    },
+  ],
 });
 
 // Lightweight wrappers around Next.js' navigation APIs

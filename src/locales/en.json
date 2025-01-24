@@ -2,7 +2,8 @@
   "HomePage": {
     "label": "Change language",
     "locale": "{locale, select, km {Khmer} en {English} other {Unknown}}",
-    "title": "Hello world!",
-    "about": "Go to the about page"
+    "title": "Hello i18n!",
+    "about": "Go to the about page",
+    "menu": "Menu"
   }
 }

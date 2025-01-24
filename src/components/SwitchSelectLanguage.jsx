@@ -9,12 +9,26 @@ export default function SwitchSelectLanguage({ children, defaultValue }) {
 
   function onSelectChange(event) {
     const nextLocale = event.target.value;
+    // { pathname, params } keep the same page when language changed
+    //  { locale: nextLocale } tell the next application (this is the new language should be display)
     router.replace({ pathname, params }, { locale: nextLocale });
   }
 
   return (
-    <select defaultValue={defaultValue} onChange={onSelectChange}>
-      {children}
-    </select>
+    <div
+      style={{ padding: "4px", backgroundColor: "white", borderRadius: "4px" }}
+    >
+      <select
+        defaultValue={defaultValue}
+        onChange={onSelectChange}
+        style={{
+          border: "none",
+          outline: "none",
+          borderColor: "white",
+        }}
+      >
+        {children}
+      </select>
+    </div>
   );
 }

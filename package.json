@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "staged": "lint-staged"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -16,13 +17,23 @@
     "@mui/styled-engine-sc": "^6.4.0",
     "next": "15.1.6",
     "next-intl": "^3.26.3",
+    "next": "15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "styled-components": "^6.1.14"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@eslint/eslintrc": "^3",
     "eslint": "^9",
-    "eslint-config-next": "15.1.6"
+    "eslint-config-next": "15.1.6",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }
